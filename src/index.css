@@ -1,0 +1,55 @@
+body {
+  margin: 20px;
+  text-align: center;
+  background: #999;
+}
+
+
+.grid-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 34px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 100px;
+  height:100px;
+}
+.Welcome-text{
+  padding-bottom: 20%;
+  margin-top: -10%;
+  font-family: serif;
+  color: Blue;
+}
+.square:focus {
+  outline: none;
+}
+.gridLayout{
+  display: flex;
+  flex-direction: row;
+}
+.square-grid{
+  margin-left: 40%;
+  margin-top: 10%;
+}
+.status{
+  padding-left: 20%;
+  padding-top : 20%;
+  font-size:2rem;
+  color: red;
+}
