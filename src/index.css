@@ -4,15 +4,10 @@ body {
   background: #999;
 }
 
-
 .grid-row:after {
   clear: both;
   content: "";
   display: table;
-}
-
-.status {
-  margin-bottom: 10px;
 }
 
 .square {
@@ -30,26 +25,32 @@ body {
   width: 100px;
   height:100px;
 }
-.Welcome-text{
+
+.Welcome-text {
   padding-bottom: 20%;
   margin-top: -10%;
   font-family: serif;
   color: Blue;
 }
+
 .square:focus {
   outline: none;
 }
-.gridLayout{
+
+.gridLayout {
   display: flex;
   flex-direction: row;
 }
-.square-grid{
+
+.square-grid {
   margin-left: 40%;
   margin-top: 10%;
 }
-.status{
+
+.status {
   padding-left: 20%;
   padding-top : 20%;
+  margin-bottom: 10px;
   font-size:2rem;
   color: red;
 }

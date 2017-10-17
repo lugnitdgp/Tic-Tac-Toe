@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import './App.css';
 
-function declareWinner(squares){
+function declareWinner(squares) {
   const win_lines = [
     [0,1,2],
     [3,4,5],
@@ -13,68 +13,74 @@ function declareWinner(squares){
     [1,4,8],
     [2,4,6]
   ];
-  for(let i=0;i<win_lines.length;i++){
+
+  for (let i = 0; i < win_lines.length; i++) {
     const [a,b,c] = win_lines[i];
-    if(squares[a]&&squares[a]===squares[b]&&squares[a]===squares[c]){
+
+    if (squares[a]&&squares[a]===squares[b]&&squares[a]===squares[c]) {
       return squares[a];
     }
   }
+
   return null;
 }
 
-class Square extends Component{
-  constructor(props){
+class Square extends Component {
+  constructor(props) {
     super(props);
     this.state = {
       val : ''
     };
   }
 
-  render(){
-    return(
+  render() {
+    return (
       <button className='square' onClick={() => this.props.onClick()}> {this.props.value} </button>
     );
   }
 }
 
-class Grid extends Component{
-  constructor(){
+class Grid extends Component {
+  constructor() {
     super();
     this.state = {
       squares : Array(9).fill(),
       isNext : 'X'
     };
-
   }
 
-  handleClick(i){
+  handleClick(i) {
     const squares = this.state.squares.slice();
-    if(declareWinner(squares)||squares[i]){
+    if (declareWinner(squares)||squares[i]) {
       return;
     }
+
     squares[i] = this.state.isNext ? 'X':'O';
+
     this.setState({
-      squares:squares,
+      squares: squares,
       isNext : !this.state.isNext
     });
   }
 
-  rendersquare(i){
+  rendersquare(i) {
     return(
       <Square value={this.state.squares[i]} onClick={() => this.handleClick(i)} />
-      );
+    );
   }
-  
-  render(){
+
+  render() {
     const winner = declareWinner(this.state.squares);
     let status;
-    if(winner){
+
+    if (winner) {
       status = 'Winner : ' + winner;
     }
-    else{
+    else {
       status ='Next Turn ' + (this.state.isNext ? 'X' : 'O');
     }
-    return(
+
+    return (
       <div className='gridLayout'>
         <div className='square-grid'>
         <h1 className='Welcome-text'>Tick-Tac-Toe</h1>
@@ -96,16 +102,17 @@ class Grid extends Component{
         </div>
         <p className='status'>{status}</p>
       </div>
-    )
+    );
   }
 }
 
 
-export default class Game extends Component{
-  render(){
-    return(
-    <div className='Grid'>
-      <Grid />
-    </div>
-    );}
+export default class Game extends Component {
+  render() {
+    return (
+      <div className='Grid'>
+        <Grid />
+      </div>
+    );
+  }
 }
