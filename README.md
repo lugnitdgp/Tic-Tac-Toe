@@ -9,6 +9,10 @@ To be able to run this project on your system, make sure you first set up the la
 Below you will find some information on how to perform common tasks.<br>
 You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 
+## Game Instructions
+
+For instructions on how to play, please refer to the [Game Instructions](instructions.md)
+
 ## Updating to New Releases
 
 Create React App is divided into two packages:
@@ -25,7 +29,6 @@ To update an existing project to a new version of `react-scripts`, [open the cha
 In most cases bumping the `react-scripts` version in `package.json` and running `npm install` in this folder should be enough, but it’s good to consult the [changelog](https://github.com/facebookincubator/create-react-app/blob/master/CHANGELOG.md) for potential breaking changes.
 
 We commit to keeping the breaking changes minimal so you can upgrade `react-scripts` painlessly.
-
 
 ## Folder Structure
 
