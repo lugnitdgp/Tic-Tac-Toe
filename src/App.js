@@ -40,12 +40,24 @@ class Square extends Component {
   }
 }
 
+class Reset extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <button className="reset-button" onClick={() => this.props.onClick()}>Reset Game</button>
+    );
+  }
+}
+
 class Grid extends Component {
   constructor() {
     super();
     this.state = {
-      squares : Array(9).fill(),
-      isNext : 'X'
+      squares: Array(9).fill(),
+      isNext: 'X'
     };
   }
 
@@ -63,9 +75,22 @@ class Grid extends Component {
     });
   }
 
+  resetGrid() {
+    this.setState({
+        squares: Array(9).fill(),
+        isNext: 'X'
+    });
+  }
+
   rendersquare(i) {
     return(
       <Square value={this.state.squares[i]} onClick={() => this.handleClick(i)} />
+    );
+  }
+
+  renderReset() {
+    return (
+        <Reset onClick={() => this.resetGrid()}></Reset>
     );
   }
 
@@ -99,6 +124,7 @@ class Grid extends Component {
             {this.rendersquare(7)}
             {this.rendersquare(8)}
           </div>
+          {this.renderReset()}
         </div>
         <p className='status'>{status}</p>
       </div>
