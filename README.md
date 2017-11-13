@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 To be able to run this project on your system, make sure you first set up the latest release of Node.js on your system.
 
-**After cloning the project directory, open a terminal window(command prompt or Power Shell for Windows Users) inside the project folder and run "npm install". This will install the required node modules into your project folder. **
+_After cloning the project directory, open a terminal window(command prompt or Power Shell for Windows Users) inside the project folder and run `npm install`. This will install the required node modules into your project folder._
 
 ## To run the project on the localhost, please refer to the **Available Scripts** Section.
 
@@ -67,7 +67,7 @@ Read instructions below for using assets from JavaScript and HTML.
 You can, however, create more top-level directories.<br>
 They will not be included in the production build so you can use them for things like documentation.
 
-**## Available Scripts
+## Available Scripts
 
 In the project directory, you can run:
 
